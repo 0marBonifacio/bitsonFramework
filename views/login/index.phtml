@@ -1,0 +1,22 @@
+		<div id="container" class="">
+			<h2>Iniciar sesión</h2>
+			
+			<form id="form1" method="post" action="">
+			
+				<input type="hidden" id="" class="" name="enviar" value="1" />
+				
+				<p>
+					<label>Usuario:</label>
+					<input type="text" name="usuario" value="<?php if(isset($this->datos['usuario'])) echo $this->datos['usuario']; ?>" id="" />
+				</p>
+				
+				<p>
+					<label>Password:</label>
+					<input type="password" name="password" value="<?php if(isset($this->datos['password'])) echo $this->datos['password']; ?>" id="" />
+				</p>
+				
+				<p><input type="submit" value="Iniciar sesión" class="button" /></p> 
+				
+			</form>
+			
+		</div>

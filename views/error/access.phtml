@@ -1,0 +1,12 @@
+<div id="container" class="container_12">
+	
+	<h2><?php if($this->mensaje) echo $this->mensaje; ?></h2>
+	
+	<p>&nbsp;</p>
+	
+	<a href="<?php echo BASE_URL; ?>">Ir a inicio</a> |
+	<a href="javascript:history.back(1)">Regresar a la pagina anterior</a>
+	<?php if (!Session::get('Auntenticado')): ?>
+	| <a href="<?php echo BASE_URL . 'login'; ?>">Iniciar sesión</a> 
+	<?php endif; ?>
+</div>

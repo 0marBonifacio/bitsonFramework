@@ -1,0 +1,37 @@
+		<div id="container" class="container_12">
+			<h2>Últimos Posts</h2>
+			<!-- <pre><?php //print_r($this->posts) ?></pre>-->
+			<?php if (isset($this->posts) && count($this->posts)): ?>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php for ($i = 0; $i < count($this->posts); $i++): ?>
+					<tr>
+						<td><?php echo $this->posts[$i]['id']; ?></td>
+						<td><?php echo $this->posts[$i]['titulo']; ?></td>
+						<td><?php echo $this->posts[$i]['cuerpo']; ?></td>
+						<td><a href="<?php echo BASE_URL . 'post/editar/' . $this->posts[$i]['id']; ?>">Editar</a></td>
+						<td><a href="<?php echo BASE_URL . 'post/eliminar/' . $this->posts[$i]['id']; ?>">Eliminar</a></td>
+					</tr>
+				<?php endfor; ?>
+				</tbody>
+			</table>
+			<?php else: ?>
+			
+			<p><strong>No hay Posts ...!</strong></p>
+			
+			<?php endif; ?>
+			<p></p>
+			<p></p>
+			<p></p>
+			<?php if (isset($this->paginacion)) echo $this->paginacion; ?>
+			
+			<?php if(Session::accesoEstrictoView(array('usuario'))): ?>
+			<p><a href="<?php echo BASE_URL; ?>post/nuevo" >Agregar Post</a></p>			
+			<?php endif; ?>
+			
+		</div>

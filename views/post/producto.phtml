@@ -1,0 +1,32 @@
+		<div id="container" class="container_12">
+			<h2>Últimos Posts</h2>
+			<!-- <pre><?php //print_r($this->posts) ?></pre>-->
+			<?php if (isset($this->productos) && count($this->productos)): ?>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php for ($i = 0; $i < count($this->productos); $i++): ?>
+					<tr>
+						<td><?php echo $this->productos[$i]['id']; ?></td>
+						<td><?php echo $this->productos[$i]['nombre']; ?></td>
+						<td><?php echo $this->productos[$i]['precio']; ?></td>
+						<td><?php echo $this->productos[$i]['stock']; ?></td>						
+					</tr>
+				<?php endfor; ?>
+				</tbody>
+			</table>
+			<?php else: ?>
+			
+			<p><strong>No hay Productos ...!</strong></p>
+			
+			<?php endif; ?>
+			<p></p>
+			<p></p>
+			<p></p>
+			<?php if (isset($this->paginacion)) echo $this->paginacion; ?>
+			
+		</div>

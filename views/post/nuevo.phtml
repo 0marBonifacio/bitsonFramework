@@ -1,0 +1,21 @@
+	
+		<div id="container" class="">
+			<h2>Agregar nuevo post</h2>
+			
+			<form id="form1" method="post" action="<?php echo BASE_URL; ?>post/nuevo">
+			
+				<input type="hidden" id="" class="" name="guardar" value="1" />
+				
+				<p>Título: <br/>
+				<input type="text" name="titulo" value="<?php if(isset($this->datos['titulo'])) echo $this->datos['titulo']; ?>" id="" />
+				</p>
+				
+				<p>Cuerpo: <br/>
+				<textarea name="cuerpo" value="" id=""><?php if(isset($this->datos['cuerpo'])) echo $this->datos['cuerpo']; ?></textarea>
+				</p>
+				
+				<p><input type="submit" value="Guardar" class="button" /></p>
+				
+			</form>
+			
+		</div>

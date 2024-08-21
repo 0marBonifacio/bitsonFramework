@@ -1,0 +1,15 @@
+		<div id="container" class="">
+			<h2>Activación de cuenta</h2>
+			
+			<label><?php if (isset($emailOff)) echo $emailOff; ?></label>
+			
+			<p>
+			<a href="<?php echo BASE_URL; ?>" >Ir al inicio </a>
+			
+			<?php if(!Session::get('Autenticado')): ?>
+			|<a href="<?php echo BASE_URL; ?>login" >Iniciar sesión</a>
+			<?php endif; ?>
+			
+			</p>
+			
+		</div>

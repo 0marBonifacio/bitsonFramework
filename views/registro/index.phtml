@@ -1,0 +1,37 @@
+		<div id="container" class="">
+			<h2>Registro de Usuario</h2>
+			
+			<form id="form1" method="post" action="">
+			
+				<input type="hidden" id="" class="" name="enviar" value="1" />
+				
+				<p>
+					<label>Nombre:</label>
+					<input type="text" name="nombre" value="<?php if(isset($this->datos['nombre'])) echo $this->datos['nombre']; ?>" id="" />
+				</p>
+				
+				<p>
+					<label>Usuario:</label>
+					<input type="text" name="usuario" value="<?php if(isset($this->datos['usuario'])) echo $this->datos['usuario']; ?>" id="" />
+				</p>
+				
+				<p>
+					<label>E-mail:</label>
+					<input type="text" name="email" value="<?php if(isset($this->datos['email'])) echo $this->datos['email']; ?>" id="" />
+				</p>
+				
+				<p>
+					<label>Contraseña:</label>
+					<input type="password" name="password"  id="" />
+				</p>
+				
+				<p>
+					<label>Repita la contraseña:</label>
+					<input type="password" name="password2"  id="" />
+				</p>
+				
+				<p><input type="submit" value="Enviar" class="button" /></p> 
+				
+			</form>
+			
+		</div>
